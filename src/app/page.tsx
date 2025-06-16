@@ -28,7 +28,7 @@ const IndexPage = () => {
     <div className="container space-y-5 p-10">
       <h1 className="mb-2">Pokemons</h1>
 
-      {/* 4. Allow pagination */}
+      {/* 5. TODO: Allow pagination */}
       <div className="space-x-2">
         <Button size="sm" className="h-fit w-[100px] p-1">
           Previous
