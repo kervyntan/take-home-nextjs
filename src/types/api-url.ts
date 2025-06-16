@@ -6,4 +6,4 @@
  * @/lib/api
  * @/hooks/useSwr
  */
-export type ApiUrl = "/"
+export type ApiUrl = "/" | "https://pokeapi.co/api/v2/pokemon"
