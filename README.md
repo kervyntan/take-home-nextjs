@@ -1,7 +1,5 @@
 # Front End Template
 
-![banner](/public/og-image.png)
-
 # Installation
 
 ```
