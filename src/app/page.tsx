@@ -41,6 +41,7 @@ const IndexPage = () => {
       <h1 className="mb-2">Pokemons</h1>
 
       <div className="space-x-2">
+        {/* Introduce pagination with limit and offset states */}
         <Button size="sm" className="h-fit w-[100px] p-1">
           Previous
         </Button>
