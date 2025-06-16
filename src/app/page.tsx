@@ -1,3 +1,6 @@
+/**
+ * 2. TODO: Identify and fix the error causing the page not to render
+ */
 import useSWR from "@/hooks/useSwr"
 import { Button } from "@/components/ui/button"
 
@@ -12,16 +15,13 @@ import { Button } from "@/components/ui/button"
  */
 
 const IndexPage = () => {
-  const { data, error, isLoading } = useSWR(
-    "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0",
-    fetch
-  )
+  const { data, error, isLoading } = useSWR()
 
   if (isLoading) return <div>loading...</div>
 
   if (error) return <div>failed to load</div>
 
-  // 2. TODO: Fix typings
+  // 3. TODO: Fix typings
   const pokemons = data.results
 
   return (
@@ -39,7 +39,7 @@ const IndexPage = () => {
         </Button>
       </div>
 
-      {/* 3. TODO:  Make this 3 columns, unlimited rows */}
+      {/* 4. TODO:  Make this 3 columns, unlimited rows */}
       <div>
         {pokemons.map((pokemon) => (
           <div>{pokemon.name}</div>
