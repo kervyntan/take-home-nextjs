@@ -1,6 +1,5 @@
-import { siteMetadata } from "./site-metadata"
 import { siteViewport } from "./site-viewport"
 
-const config = { siteMetadata, siteViewport }
+const config = { siteViewport }
 
 export default config

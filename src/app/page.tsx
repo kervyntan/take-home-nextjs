@@ -6,19 +6,22 @@ import { Button } from "@/components/ui/button"
  */
 
 /**
- * 1. Fix the `IndexPage` component so that it fetches a list of Pokemon from the PokeAPI.
+ * 1. TODO: Fix the `IndexPage` component so that it fetches a list of Pokemon from the PokeAPI.
  * The PokeAPI endpoint to fetch the list of Pokemon is:
  * - https://pokeapi.co/api/v2/pokemon?limit=100&offset=0
  */
 
 const IndexPage = () => {
-  const { data, error, isLoading } = useSWR()
+  const { data, error, isLoading } = useSWR(
+    "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0",
+    fetch
+  )
 
   if (isLoading) return <div>loading...</div>
 
   if (error) return <div>failed to load</div>
 
-  // 2. Fix typings
+  // 2. TODO: Fix typings
   const pokemons = data.results
 
   return (
@@ -36,7 +39,7 @@ const IndexPage = () => {
         </Button>
       </div>
 
-      {/* 3. Make this 3 columns, unlimited rows */}
+      {/* 3. TODO:  Make this 3 columns, unlimited rows */}
       <div>
         {pokemons.map((pokemon) => (
           <div>{pokemon.name}</div>
